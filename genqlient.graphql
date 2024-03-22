@@ -1,0 +1,11 @@
+mutation AddPolicyDefinition ($input: [AddPolicyDefinitionInput!]!) {
+    addPolicyDefinition(input: $input) {
+        numUids
+    }
+}
+
+mutation AddPolicyEnforcement($input: [AddPolicyEnforcementInput!]!) {
+    addPolicyEnforcement(input: $input) {
+        numUids
+    }
+}
