@@ -20,8 +20,8 @@ import (
 const (
 	OpsmxAuthHeader = "X-OpsMx-Auth"
 	graphqlEndpoint = "http://localhost:8080/graphql"
-	Token           = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcHNNeCIsInN1YiI6IjEyMzQ1Njc4OTAiLCJuYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE1MTYyMzkwMjIsImF1ZCI6WyJzc2Qub3BzbXguaW8iXSwic3NkLm9wc214LmlvIjp7InR5cGUiOiJpbnRlcm5hbC1hY2NvdW50L3YxIiwiaXNBZG1pbiI6dHJ1ZX19.Z9n7UjQhX_sY2fRP7rRxNbShcmVhyjV2GT1rY1nsbhw"
-	OrgId           = "e550c51d-9d83-4589-86a7-cb40a270c970"
+	Token           = "eyJhbGciOiJSUzI1NiIsImtpZCI6IjA1Nzk1MDUyLTcyYzAtNDk1Ni1hODc1LWEzZmUzNjJmMjk4MCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcHNNeCIsImF1ZCI6WyJzc2Qub3BzbXguaW8iXSwiZXhwIjoxNzExNzE5NTg3LCJuYmYiOjE3MTE2OTc5ODcsImp0aSI6Ijg0NWQ2ODRlLWVkOWYtMTFlZS05YWQ4LTk2ZGUyMDEzYTIzNiIsInNzZC5vcHNteC5pbyI6eyJ0eXBlIjoiaW50ZXJuYWwtYWNjb3VudC92MSIsImF1dGhvcml6YXRpb25zIjpbImFjY2Vzcy1kZ3JhcGgiXSwic2VydmljZSI6InNzZC1vcGEifX0.i1k9qSGRwGGgHXidTPXB0Hir6lNQKyIcr7Ya3nC0-k1BjEJFwlu5BfyooNxj6XcOK8z9r4b0_o-e5G7_ruxP1sw5AWe5Whl4J3Mo_lg3GmGi2D02dgjPHxyQtqq3DaxIBZ1hniqJG7PGthWW6D_BWbNoB1Q3UlcZsVxNM2Q_Z59-FiqJqwMT0BPaL5FcGS0G9FDXLR-ykKZocJ63Udo_MwfeQbKyMIYE9vZwvoanaq3Z3EZmX7dkUs6NcGw9IHLDMMRcwMYQXs3NVs2VgT2tj3E5G64IZ13jrKOywkRfiKJcGB3NnsZ69amKSPF1y0OgMp-Pz4vbvFMdVgvxAIjV6A"
+	OrgId           = "78196327-04f8-4555-a2a4-ba10b20d7298"
 )
 
 func customGraphQlCall(body []byte) error {

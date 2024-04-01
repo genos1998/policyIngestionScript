@@ -733,6 +733,69 @@ func (v *OrganizationRef) GetIntegrators() []*IntegratorRef { return v.Integrato
 // GetFeatureModes returns OrganizationRef.FeatureModes, and is useful for accessing the field via an interface.
 func (v *OrganizationRef) GetFeatureModes() []*FeatureModeRef { return v.FeatureModes }
 
+type PolicyDefinitionPatch struct {
+	OwnerOrg         *OrganizationRef     `json:"ownerOrg,omitempty"`
+	OwnerTeam        *TeamRef             `json:"ownerTeam,omitempty"`
+	OwnerApplication *ApplicationRef      `json:"ownerApplication,omitempty"`
+	CreatedAt        *time.Time           `json:"createdAt"`
+	UpdatedAt        *time.Time           `json:"updatedAt"`
+	PolicyName       string               `json:"policyName"`
+	Category         string               `json:"category"`
+	Stage            string               `json:"stage"`
+	Description      string               `json:"description"`
+	ScheduledPolicy  *bool                `json:"scheduledPolicy"`
+	Script           string               `json:"script"`
+	DatasourceTool   []*DatasourceToolRef `json:"datasourceTool,omitempty"`
+	Variables        string               `json:"variables"`
+	ConditionName    string               `json:"conditionName"`
+	Suggestion       string               `json:"suggestion"`
+}
+
+// GetOwnerOrg returns PolicyDefinitionPatch.OwnerOrg, and is useful for accessing the field via an interface.
+func (v *PolicyDefinitionPatch) GetOwnerOrg() *OrganizationRef { return v.OwnerOrg }
+
+// GetOwnerTeam returns PolicyDefinitionPatch.OwnerTeam, and is useful for accessing the field via an interface.
+func (v *PolicyDefinitionPatch) GetOwnerTeam() *TeamRef { return v.OwnerTeam }
+
+// GetOwnerApplication returns PolicyDefinitionPatch.OwnerApplication, and is useful for accessing the field via an interface.
+func (v *PolicyDefinitionPatch) GetOwnerApplication() *ApplicationRef { return v.OwnerApplication }
+
+// GetCreatedAt returns PolicyDefinitionPatch.CreatedAt, and is useful for accessing the field via an interface.
+func (v *PolicyDefinitionPatch) GetCreatedAt() *time.Time { return v.CreatedAt }
+
+// GetUpdatedAt returns PolicyDefinitionPatch.UpdatedAt, and is useful for accessing the field via an interface.
+func (v *PolicyDefinitionPatch) GetUpdatedAt() *time.Time { return v.UpdatedAt }
+
+// GetPolicyName returns PolicyDefinitionPatch.PolicyName, and is useful for accessing the field via an interface.
+func (v *PolicyDefinitionPatch) GetPolicyName() string { return v.PolicyName }
+
+// GetCategory returns PolicyDefinitionPatch.Category, and is useful for accessing the field via an interface.
+func (v *PolicyDefinitionPatch) GetCategory() string { return v.Category }
+
+// GetStage returns PolicyDefinitionPatch.Stage, and is useful for accessing the field via an interface.
+func (v *PolicyDefinitionPatch) GetStage() string { return v.Stage }
+
+// GetDescription returns PolicyDefinitionPatch.Description, and is useful for accessing the field via an interface.
+func (v *PolicyDefinitionPatch) GetDescription() string { return v.Description }
+
+// GetScheduledPolicy returns PolicyDefinitionPatch.ScheduledPolicy, and is useful for accessing the field via an interface.
+func (v *PolicyDefinitionPatch) GetScheduledPolicy() *bool { return v.ScheduledPolicy }
+
+// GetScript returns PolicyDefinitionPatch.Script, and is useful for accessing the field via an interface.
+func (v *PolicyDefinitionPatch) GetScript() string { return v.Script }
+
+// GetDatasourceTool returns PolicyDefinitionPatch.DatasourceTool, and is useful for accessing the field via an interface.
+func (v *PolicyDefinitionPatch) GetDatasourceTool() []*DatasourceToolRef { return v.DatasourceTool }
+
+// GetVariables returns PolicyDefinitionPatch.Variables, and is useful for accessing the field via an interface.
+func (v *PolicyDefinitionPatch) GetVariables() string { return v.Variables }
+
+// GetConditionName returns PolicyDefinitionPatch.ConditionName, and is useful for accessing the field via an interface.
+func (v *PolicyDefinitionPatch) GetConditionName() string { return v.ConditionName }
+
+// GetSuggestion returns PolicyDefinitionPatch.Suggestion, and is useful for accessing the field via an interface.
+func (v *PolicyDefinitionPatch) GetSuggestion() string { return v.Suggestion }
+
 type PolicyDefinitionRef struct {
 	Id               string               `json:"id"`
 	OwnerOrg         *OrganizationRef     `json:"ownerOrg,omitempty"`
@@ -1110,6 +1173,102 @@ func (v *ToolsUsedRef) GetDeploy() string { return v.Deploy }
 // GetSbom returns ToolsUsedRef.Sbom, and is useful for accessing the field via an interface.
 func (v *ToolsUsedRef) GetSbom() string { return v.Sbom }
 
+// UpdatePolicyDefinitionResponse is returned by UpdatePolicyDefinition on success.
+type UpdatePolicyDefinitionResponse struct {
+	UpdatePolicyDefinition *UpdatePolicyDefinitionUpdatePolicyDefinitionUpdatePolicyDefinitionPayload `json:"updatePolicyDefinition"`
+}
+
+// GetUpdatePolicyDefinition returns UpdatePolicyDefinitionResponse.UpdatePolicyDefinition, and is useful for accessing the field via an interface.
+func (v *UpdatePolicyDefinitionResponse) GetUpdatePolicyDefinition() *UpdatePolicyDefinitionUpdatePolicyDefinitionUpdatePolicyDefinitionPayload {
+	return v.UpdatePolicyDefinition
+}
+
+// UpdatePolicyDefinitionUpdatePolicyDefinitionUpdatePolicyDefinitionPayload includes the requested fields of the GraphQL type UpdatePolicyDefinitionPayload.
+type UpdatePolicyDefinitionUpdatePolicyDefinitionUpdatePolicyDefinitionPayload struct {
+	PolicyDefinition []*UpdatePolicyDefinitionUpdatePolicyDefinitionUpdatePolicyDefinitionPayloadPolicyDefinition `json:"policyDefinition"`
+}
+
+// GetPolicyDefinition returns UpdatePolicyDefinitionUpdatePolicyDefinitionUpdatePolicyDefinitionPayload.PolicyDefinition, and is useful for accessing the field via an interface.
+func (v *UpdatePolicyDefinitionUpdatePolicyDefinitionUpdatePolicyDefinitionPayload) GetPolicyDefinition() []*UpdatePolicyDefinitionUpdatePolicyDefinitionUpdatePolicyDefinitionPayloadPolicyDefinition {
+	return v.PolicyDefinition
+}
+
+// UpdatePolicyDefinitionUpdatePolicyDefinitionUpdatePolicyDefinitionPayloadPolicyDefinition includes the requested fields of the GraphQL type PolicyDefinition.
+type UpdatePolicyDefinitionUpdatePolicyDefinitionUpdatePolicyDefinitionPayloadPolicyDefinition struct {
+	Id              string     `json:"id"`
+	CreatedAt       *time.Time `json:"createdAt"`
+	UpdatedAt       *time.Time `json:"updatedAt"`
+	PolicyName      string     `json:"policyName"`
+	Category        string     `json:"category"`
+	Stage           string     `json:"stage"`
+	Description     string     `json:"description"`
+	ScheduledPolicy *bool      `json:"scheduledPolicy"`
+	Script          string     `json:"script"`
+	Variables       string     `json:"variables"`
+	ConditionName   string     `json:"conditionName"`
+	Suggestion      string     `json:"suggestion"`
+}
+
+// GetId returns UpdatePolicyDefinitionUpdatePolicyDefinitionUpdatePolicyDefinitionPayloadPolicyDefinition.Id, and is useful for accessing the field via an interface.
+func (v *UpdatePolicyDefinitionUpdatePolicyDefinitionUpdatePolicyDefinitionPayloadPolicyDefinition) GetId() string {
+	return v.Id
+}
+
+// GetCreatedAt returns UpdatePolicyDefinitionUpdatePolicyDefinitionUpdatePolicyDefinitionPayloadPolicyDefinition.CreatedAt, and is useful for accessing the field via an interface.
+func (v *UpdatePolicyDefinitionUpdatePolicyDefinitionUpdatePolicyDefinitionPayloadPolicyDefinition) GetCreatedAt() *time.Time {
+	return v.CreatedAt
+}
+
+// GetUpdatedAt returns UpdatePolicyDefinitionUpdatePolicyDefinitionUpdatePolicyDefinitionPayloadPolicyDefinition.UpdatedAt, and is useful for accessing the field via an interface.
+func (v *UpdatePolicyDefinitionUpdatePolicyDefinitionUpdatePolicyDefinitionPayloadPolicyDefinition) GetUpdatedAt() *time.Time {
+	return v.UpdatedAt
+}
+
+// GetPolicyName returns UpdatePolicyDefinitionUpdatePolicyDefinitionUpdatePolicyDefinitionPayloadPolicyDefinition.PolicyName, and is useful for accessing the field via an interface.
+func (v *UpdatePolicyDefinitionUpdatePolicyDefinitionUpdatePolicyDefinitionPayloadPolicyDefinition) GetPolicyName() string {
+	return v.PolicyName
+}
+
+// GetCategory returns UpdatePolicyDefinitionUpdatePolicyDefinitionUpdatePolicyDefinitionPayloadPolicyDefinition.Category, and is useful for accessing the field via an interface.
+func (v *UpdatePolicyDefinitionUpdatePolicyDefinitionUpdatePolicyDefinitionPayloadPolicyDefinition) GetCategory() string {
+	return v.Category
+}
+
+// GetStage returns UpdatePolicyDefinitionUpdatePolicyDefinitionUpdatePolicyDefinitionPayloadPolicyDefinition.Stage, and is useful for accessing the field via an interface.
+func (v *UpdatePolicyDefinitionUpdatePolicyDefinitionUpdatePolicyDefinitionPayloadPolicyDefinition) GetStage() string {
+	return v.Stage
+}
+
+// GetDescription returns UpdatePolicyDefinitionUpdatePolicyDefinitionUpdatePolicyDefinitionPayloadPolicyDefinition.Description, and is useful for accessing the field via an interface.
+func (v *UpdatePolicyDefinitionUpdatePolicyDefinitionUpdatePolicyDefinitionPayloadPolicyDefinition) GetDescription() string {
+	return v.Description
+}
+
+// GetScheduledPolicy returns UpdatePolicyDefinitionUpdatePolicyDefinitionUpdatePolicyDefinitionPayloadPolicyDefinition.ScheduledPolicy, and is useful for accessing the field via an interface.
+func (v *UpdatePolicyDefinitionUpdatePolicyDefinitionUpdatePolicyDefinitionPayloadPolicyDefinition) GetScheduledPolicy() *bool {
+	return v.ScheduledPolicy
+}
+
+// GetScript returns UpdatePolicyDefinitionUpdatePolicyDefinitionUpdatePolicyDefinitionPayloadPolicyDefinition.Script, and is useful for accessing the field via an interface.
+func (v *UpdatePolicyDefinitionUpdatePolicyDefinitionUpdatePolicyDefinitionPayloadPolicyDefinition) GetScript() string {
+	return v.Script
+}
+
+// GetVariables returns UpdatePolicyDefinitionUpdatePolicyDefinitionUpdatePolicyDefinitionPayloadPolicyDefinition.Variables, and is useful for accessing the field via an interface.
+func (v *UpdatePolicyDefinitionUpdatePolicyDefinitionUpdatePolicyDefinitionPayloadPolicyDefinition) GetVariables() string {
+	return v.Variables
+}
+
+// GetConditionName returns UpdatePolicyDefinitionUpdatePolicyDefinitionUpdatePolicyDefinitionPayloadPolicyDefinition.ConditionName, and is useful for accessing the field via an interface.
+func (v *UpdatePolicyDefinitionUpdatePolicyDefinitionUpdatePolicyDefinitionPayloadPolicyDefinition) GetConditionName() string {
+	return v.ConditionName
+}
+
+// GetSuggestion returns UpdatePolicyDefinitionUpdatePolicyDefinitionUpdatePolicyDefinitionPayloadPolicyDefinition.Suggestion, and is useful for accessing the field via an interface.
+func (v *UpdatePolicyDefinitionUpdatePolicyDefinitionUpdatePolicyDefinitionPayloadPolicyDefinition) GetSuggestion() string {
+	return v.Suggestion
+}
+
 type VulnerabilityRef struct {
 	Id             string          `json:"id"`
 	Parent         string          `json:"parent"`
@@ -1173,6 +1332,16 @@ type __AddPolicyEnforcementInput struct {
 // GetInput returns __AddPolicyEnforcementInput.Input, and is useful for accessing the field via an interface.
 func (v *__AddPolicyEnforcementInput) GetInput() []*AddPolicyEnforcementInput { return v.Input }
 
+// __UpdatePolicyDefinitionInput is used internally by genqlient
+type __UpdatePolicyDefinitionInput struct {
+	PolicyDefinitionPatch *PolicyDefinitionPatch `json:"PolicyDefinitionPatch,omitempty"`
+}
+
+// GetPolicyDefinitionPatch returns __UpdatePolicyDefinitionInput.PolicyDefinitionPatch, and is useful for accessing the field via an interface.
+func (v *__UpdatePolicyDefinitionInput) GetPolicyDefinitionPatch() *PolicyDefinitionPatch {
+	return v.PolicyDefinitionPatch
+}
+
 // The query or mutation executed by AddPolicyDefinition.
 const AddPolicyDefinition_Operation = `
 mutation AddPolicyDefinition ($input: [AddPolicyDefinitionInput!]!) {
@@ -1232,6 +1401,54 @@ func AddPolicyEnforcement(
 	var err_ error
 
 	var data_ AddPolicyEnforcementResponse
+	resp_ := &graphql.Response{Data: &data_}
+
+	err_ = client_.MakeRequest(
+		ctx_,
+		req_,
+		resp_,
+	)
+
+	return &data_, err_
+}
+
+// The query or mutation executed by UpdatePolicyDefinition.
+const UpdatePolicyDefinition_Operation = `
+mutation UpdatePolicyDefinition ($PolicyDefinitionPatch: PolicyDefinitionPatch!) {
+	updatePolicyDefinition(input: {filter:{id:{eq:"206"}},set:$PolicyDefinitionPatch}) {
+		policyDefinition {
+			id
+			createdAt
+			updatedAt
+			policyName
+			category
+			stage
+			description
+			scheduledPolicy
+			script
+			variables
+			conditionName
+			suggestion
+		}
+	}
+}
+`
+
+func UpdatePolicyDefinition(
+	ctx_ context.Context,
+	client_ graphql.Client,
+	PolicyDefinitionPatch *PolicyDefinitionPatch,
+) (*UpdatePolicyDefinitionResponse, error) {
+	req_ := &graphql.Request{
+		OpName: "UpdatePolicyDefinition",
+		Query:  UpdatePolicyDefinition_Operation,
+		Variables: &__UpdatePolicyDefinitionInput{
+			PolicyDefinitionPatch: PolicyDefinitionPatch,
+		},
+	}
+	var err_ error
+
+	var data_ UpdatePolicyDefinitionResponse
 	resp_ := &graphql.Response{Data: &data_}
 
 	err_ = client_.MakeRequest(

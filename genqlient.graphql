@@ -9,3 +9,26 @@ mutation AddPolicyEnforcement($input: [AddPolicyEnforcementInput!]!) {
         numUids
     }
 }
+
+mutation UpdatePolicyDefinition(
+    $PolicyDefinitionPatch: PolicyDefinitionPatch!
+) {
+    updatePolicyDefinition(
+        input: { filter: { id: { eq: "206" } }, set: $PolicyDefinitionPatch }
+    ) {
+        policyDefinition {
+            id
+            createdAt
+            updatedAt
+            policyName
+            category
+            stage
+            description
+            scheduledPolicy
+            script
+            variables
+            conditionName
+            suggestion
+        }
+    }
+}

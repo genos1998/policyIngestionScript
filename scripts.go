@@ -6,7 +6,7 @@ mutation AddFeatureMode {
         input: [
         {
             id: "1"
-            organization: { id: "e550c51d-9d83-4589-86a7-cb40a270c970" }
+            organization: { id: "78196327-04f8-4555-a2a4-ba10b20d7298" }
             enabled: true
             createdAt: "2024-02-21T12:30:00"
             updatedAt: "2024-02-21T12:30:00"
@@ -16,7 +16,7 @@ mutation AddFeatureMode {
         },
         {
             id: "2"
-            organization: { id: "e550c51d-9d83-4589-86a7-cb40a270c970" }
+            organization: { id: "78196327-04f8-4555-a2a4-ba10b20d7298" }
             enabled: true
             createdAt: "2024-02-21T12:30:00"
             updatedAt: "2024-02-21T12:30:00"
@@ -26,7 +26,7 @@ mutation AddFeatureMode {
         },
         {
             id: "3"
-            organization: { id: "e550c51d-9d83-4589-86a7-cb40a270c970" }
+            organization: { id: "78196327-04f8-4555-a2a4-ba10b20d7298" }
             enabled: true
             createdAt: "2024-02-21T12:30:00"
             updatedAt: "2024-02-21T12:30:00"
@@ -36,7 +36,7 @@ mutation AddFeatureMode {
         },
         {
             id: "4"
-            organization: { id: "e550c51d-9d83-4589-86a7-cb40a270c970" }
+            organization: { id: "78196327-04f8-4555-a2a4-ba10b20d7298" }
             enabled: true
             createdAt: "2024-02-21T12:30:00"
             updatedAt: "2024-02-21T12:30:00"
@@ -46,7 +46,7 @@ mutation AddFeatureMode {
         },
         {
             id: "5"
-            organization: { id: "e550c51d-9d83-4589-86a7-cb40a270c970" }
+            organization: { id: "78196327-04f8-4555-a2a4-ba10b20d7298" }
             enabled: false
             createdAt: "2024-02-21T12:30:00"
             updatedAt: "2024-02-21T12:30:00"
